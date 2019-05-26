@@ -1,0 +1,100 @@
+/* 规划好页面的细节样式  如浏览器自带的 边距 和 文字样式  
+并且适配好页面的宽度 */
+*{ /* 通配符选择器  选中所有标签 */
+    /* 权重选择：important>id>class>tag>inhret  子元素有的样式会继承自父元素  权重进制256*/
+    margin:0;
+    padding: 0;/* 外边距和内边距            有个东西叫做box-sizing：borderbox*/
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    width: 100%;   /* 只有当html标签设置好的时候 body的宽高才有效  具体参考相关文档 */
+    height: auto;
+}
+body{
+    background: url("../img/ant-rozetsky-209759-unsplash.png") 100% 100%;
+}
+a{
+    text-decoration: none;/* a标签的下划线 */
+    color: #000;
+}
+
+.verb{  
+    /* 给需要垂直居中的元素加上这个类名就可以 */
+     /* 垂直居中 */
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+      /* 垂直居中 */
+}
+/* 导航栏begin */
+.nav-wrapper{   /* 类选择器 */
+    width: 100%;
+    height: 60px;
+}
+.nav{
+    margin: 0 auto;  /* 居中方式 */
+    width: 1010px;
+    height: 60px;
+    border: 1px solid #b6b6b6;
+}
+.nav>
+#nav-logo{
+    height: 37px;
+    width: 38px;
+    float: left;
+}
+.nav>
+span#nav-fly{
+    color: #fff;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+
+.nav>ul{
+    float: right;
+    display: inline;
+}
+.nav>ul>li{
+    width: 80px;
+    height: 60px;
+    display: inline-block;
+}
+.nav>ul>li>a{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 1000;
+    text-shadow: 0px 1px 6px rgb(49, 49, 49) ;
+    line-height: 60px;
+    /* 文本元素居中 行高等于父元素高度 */
+}
+/* 导航栏end */
+
+
+
+
+
+
+
+/* 媒体查询   可以检测当前窗口的宽度 来适配不同的样式  
+    响应式布局 */
+    @media screen and (min-width: 1000px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
