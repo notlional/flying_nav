@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>中国矿业大学导航站</title>
-    <!-- 样式与结构相分离 -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- 导航部分的外联css样式 -->
-    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>中国矿业大学导航站</title>
+	<!-- 样式与结构相分离 -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- 导航部分的外联css样式 -->
+
 </head>
+
 <body>
-    <!--         基础的div布局 -->
-                <!-- 导航栏begin -->
-    <div class="nav-wrapper">
-        <div class="nav">
-            <img src="img/Logo.png" alt="" id="nav-logo">
-            
-            <ul>
-                <li><a  href="http://www.cumt.edu.cn/61/f3/c1279a418291/page.htm">矿大vpn</a></li>
-                <li><a  href="http://gsoft.cumt.edu.cn/">正版office</a></li>
-                <li><a  href="javascript:">院系链接</a></li>
-                <li><a  href="">其他链接</a></li>
-                <li><a href="">问题反馈</a></li>
-            </ul>
-        </div>
-    </div>
-                <!-- 导航栏end -->
+	<!--         基础的div布局 -->
+	<!-- 导航栏begin -->
+	<div class="nav-wrapper">
+		<div class="nav hori">
+			<img src="img/Logo.png" alt="" id="nav-logo">
+
+			<ul>
+				<li><a href="http://www.cumt.edu.cn/61/f3/c1279a418291/page.htm">矿大vpn</a></li>
+				<li><a href="http://gsoft.cumt.edu.cn/">正版office</a></li>
+				<li><a href="javascript:">院系链接</a></li>
+				<li><a href="">其他链接</a></li>
+				<li><a href="">问题反馈</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航栏end -->
+
+	<!-- 搜索栏begin-->
+	<div class="search-bar hori">
+		<img src="img/校徽1@2x.png" alt="cumt-logo">
+		<img src="img/Logo@2x.png" alt="flying-logo">
+		<!-- 搜索栏文字begin-->
+		<div class="search-text">
+			<div class="title">导航站</div>
+			<div class="text">中国矿业大学翔工作室</div>
+		</div>
+		<!-- 搜索栏文字end-->
+
+		<!-- 搜索begin-->
+		<div class="search">
+			<form action="http://www.baidu.com/baidu" target="blank">
+				<input id="input" type="text" value="在此输入搜索内容" name="word" onclick="if(this.value=='在此输入搜索内容')value='';"
+					onblur="if(this.value=='')value='在此输入搜索内容';" class="form-control flex">
+				<button type="submit">
+					<img src="img/搜索@2x.png" alt="">
+				</button>
+			</form>
+		</div>
+		<!-- 搜索end-->
+	</div>
+	<!-- 搜索栏end-->
+
+	<!-- 链接栏begin-->
+	<div class="container">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<!-- 链接栏end-->
 </body>
+
 </html>
