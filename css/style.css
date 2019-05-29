@@ -139,13 +139,41 @@ a {
 	height: 420px;
 	background-color: rgba(0, 0, 0, .1);
 }
-
+	/* 盒子大小 */
 .box {
 	height: 420px;
 	width: 280px;
 	margin-right: 30px;
 	display: inline-block;
 	background-color: rgba(0,0,0,.1);
+}
+	/* 设置图片的位置 */
+.box img{
+	width: 194px;
+	height: 157px;
+	position: relative;
+	margin-top: 224px;
+	top: -107px;
+	left: 43px;
+}
+	/* 设置文本居中 */
+.box .pre{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	top: -190px;
+}
+	/* 设置文字行间距 */
+.box .pre a{
+	margin: 8px 0;
+}
+
+.box .sub{
+	font-size: 26px;
+	position: relative;
+	top: -296px;
+	text-align: center;
 }
 
 
