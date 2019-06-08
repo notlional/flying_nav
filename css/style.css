@@ -6,7 +6,6 @@
 	margin: 0;
 	padding: 0;
 	/* 外边距和内边距            有个东西叫做box-sizing：borderbox*/
-	font-size: 18px;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,7 +19,8 @@ body {
 
 body {
 	background: url("../img/ant-rozetsky-209759-unsplash.png") 100% 100%;
-	min-height: 1080px;
+	background-size: cover;
+	min-height: 1080px;	/* 保证footer与内容的间距*/
 	display: flex;
 	flex-direction: column;
 }
@@ -54,18 +54,19 @@ a {
 	/* 类选择器 */
 	width: 100%;
 	height: 60px;
+	background-color: rgba(0,0,0,.07);
 }
 
 .nav {
 	margin: 0 auto;
+	padding-top: 5px;
 	/* 居中方式 */
 	width: 1010px;
 	height: 60px;
-	border: 1px solid #b6b6b6;
 }
 
 .nav>#nav-logo {
-	height: 60px;
+	height: 50px;
 	float: left;
 }
 
@@ -193,28 +194,41 @@ a {
 	height: 80px;
 	display: flex;
 	justify-content: center;
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.2);
 }
 	/* 页脚内容部分*/
 .footer .footer-container{
 	width: 1010px;
 	height: 80px;
+	font-size: 12px;
+	color: white;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: rgba(0,0,0,.2);
 }
 		/* 版权信息 */
 .footer-container .footer-info{
-	margin-right: auto;
-}
-
-.footer-container .footer-info div{
-	font-size: 12px;
+	margin-right: 187px;
 }
 
 .footer-container .footer-logo{
-	background-image: url('../img/Logo.png');
+	background: url('../img/Logo.png');
+	background-repeat: no-repeat;
+	font-size: 16px;
+}
+
+.footer-container .footer-contact{
+	margin-left: auto;
+	flex-direction: row;
+	display: flex;
+}
+
+.footer-contact .text{
+	padding-top: 8.5px;
+}
+
+.footer-contact .contact-logo img{
+	width: 30px;
+	margin-left: 20px;
 }
 
 /* 媒体查询   可以检测当前窗口的宽度 来适配不同的样式  
