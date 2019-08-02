@@ -1,0 +1,5 @@
+var a = document.getElementById("myDiv");
+alert(a.getAttribute("id"));
+
+var b = element.attributes.getNamedItem("id").nodeValue;
+var b = element.attributes["id"].nodeValue;

@@ -131,16 +131,54 @@ a {
 }
 
 /* 搜索栏文字end */
+
+/* search这个div用于使输入的文字相对左边框产生20px距离 */
 .search {
 	display: block;
 	float: right;
+	border: 0px;
+	margin-top: 14px;
+	width: 500px;
+	background-color: #fff;
+	padding-left: 20px;
+	border-radius: 50px;
+}
+
+/* 设置输入框内部样式 */
+#input{
+	width: 460px;
+	height: 38px;
+	border: 0px;
+	font-size: 14px;
+	font-family: PingFangSC-Regular;
+	color: #b0b0b0;
+}
+
+/* 取消input点击时默认的外边框 */
+#input:focus{
+	outline: 0;
+}
+
+/* 使按钮左移到框内 */
+#search-button{
+	height: 16px;
+	margin: 0px;
+	border: 0;
+	position: relative;
+	right: 16px;
+	top: 3px;
+}
+
+/* 按钮内置的图片，因为设置前面两个logo时产生了margin，这里消除margin */
+#search-icon{
+	margin-right: 0px;
 }
 
 /* 搜索栏end */
 
 /* 链接栏begin 
 	 采用flex布局*/
-.container {
+#container {
 	margin: 0 auto;
 	margin-top: 122px;
 	width: 940px;
@@ -165,6 +203,7 @@ a {
 	height: 157px;
 	position: relative;
 	top: 94px;
+	transition-duration: 0.6s;
 }
 	/* 设置文本居中 */
 .box .pre{
@@ -173,10 +212,12 @@ a {
 	flex-direction: column;
 	position: relative;
 	top: -111px;
+	opacity: 0;
+	transition-duration: 0.6s;
 }
 	/* 设置文字行间距 */
 .box .pre a{
-	margin: 8px 0;
+	padding: 8px 0;
 	color: #808080;
 }
 
@@ -229,6 +270,27 @@ a {
 .footer-contact .contact-logo img{
 	width: 30px;
 	margin-left: 20px;
+}
+
+#qrFrame{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #e5d6d8;
+	border-radius: 10px;
+	background-color: #8bb3d7;
+	position: relative;
+	top: -85px;
+	left: -118px;
+	visibility: hidden;
+}
+
+#qrCode{
+	width: 80px;
+	height: 80px;
+	border: 0px;
+	position: relative;
+	top: 9px;
+	left: 9px;
 }
 
 /* 媒体查询   可以检测当前窗口的宽度 来适配不同的样式  

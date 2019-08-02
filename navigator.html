@@ -47,8 +47,8 @@
 				<form action="http://www.baidu.com/baidu" target="blank">
 					<input id="input" type="text" value="在此输入搜索内容" name="word" onclick="if(this.value=='在此输入搜索内容')value='';"
 						onblur="if(this.value=='')value='在此输入搜索内容';" class="form-control flex">
-					<button type="submit">
-						<img src="img/搜索@2x.png" alt="">
+					<button type="submit" id="search-button">
+						<img id="search-icon" src="img/搜索@2x.png" alt="">
 					</button>
 				</form>
 			</div>
@@ -57,7 +57,7 @@
 		<!-- 搜索栏end-->
 
 		<!-- 链接栏begin-->
-		<div class="container">
+		<div id="container">
 			<div class="box">
 				<img src="img/fast_working@2x.png" alt="">
 				<div class="pre">
@@ -121,14 +121,18 @@
 			<div class="footer-contact">
 				<div class="text">联系我们：</div>
 				<div class="contact-logo">
-					<img src="img/QQ@2x.png" alt="">
-					<img src="img/微博@2x.png" alt="">
-					<img src="img/微信@2x.png" alt="">
+					<img src="img/QQ@2x.png" class="qq">
+					<img src="img/微博@2x.png" class="wb">
+					<img src="img/微信@2x.png" class="wx">
 				</div>
 			</div>
 		</div>
+		<div id="qrFrame">
+			<img id="qrCode">
+		</div>
 
 	</div>
+	<script src="main.js"></script>
 </body>
 
 </html>
