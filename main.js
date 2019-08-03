@@ -103,8 +103,21 @@ window.ontouchmove = function () {
     scroll(box2);
     scroll(box3);
     box1Position = box1.getBoundingClientRect().y;
-    isStop();
+    isStop();//判断滚动是否停止
   }
+}
+
+//用于判断滚动是否结束，因为对ontouchmove的监控会在手指滑动之后，离开屏幕的时候失效，此时如果屏幕继续下滑，那么不透明度还是会停留在离开时候的样子。这里设置一个50ms的timeout，检测box1的y轴前后是否一样，如果不一样则表明屏幕还在滚动
+function isStop() {
+  setTimeout(function () {
+    if (box1.getBoundingClientRect().y != box1Position) {
+      scroll(box1);
+      scroll(box2);
+      scroll(box3);
+      box1Position = box1.getBoundingClientRect().y;
+      isStop();
+    }
+  },50)
 }
 
 //滑动的函数,通过box在屏幕内的比例来控制文字和图片的不透明度
