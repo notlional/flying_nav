@@ -10,6 +10,9 @@ container.onmouseover = function (ev) {
   var ev = ev || window.event;
   var target = ev.target || ev.srcElement;
   if (target.className == 'box') {
+    if (lastBox) { //确保只有一个显示
+      leave(lastBox);
+    }
     lastBox = target;
     show(target);
   }
@@ -77,11 +80,12 @@ function hide() {
 
 
 
-/************手机端滑动开始*****************/
+/************移动端滑动开始*****************/
 var box1 = document.getElementById('box1');
 var box2 = document.getElementById('box2');
 var box3 = document.getElementById('box3');
 
+var box1Position = box1.getBoundingClientRect().y;//用于判断滚动是否结束
 var height = box1.offsetHeight; //获取每一个box的高度
 var windowHeight = window.innerHeight; //获取屏幕高度
 
@@ -94,9 +98,13 @@ if (screen.width < 1000) {
 
 //屏幕滑动的监控
 window.ontouchmove = function () {
-  scroll(box1);
-  scroll(box2);
-  scroll(box3);
+  if (screen.width < 1000) {
+    scroll(box1);
+    scroll(box2);
+    scroll(box3);
+    box1Position = box1.getBoundingClientRect().y;
+    isStop();
+  }
 }
 
 //滑动的函数,通过box在屏幕内的比例来控制文字和图片的不透明度
@@ -123,4 +131,4 @@ function scroll(box) {
     }
   }
 }
-/***********手机端滑动结束****************/
+/***********移动端滑动结束****************/
