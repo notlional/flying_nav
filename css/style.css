@@ -292,7 +292,56 @@ a {
 	top: 9px;
 	left: 9px;
 }
-
 /* 媒体查询   可以检测当前窗口的宽度 来适配不同的样式  
     响应式布局 */
-@media screen and (min-width: 1000px) {}
+@media screen and (max-width: 1000px) {
+	body{
+		min-height: unset;
+	}
+
+	.nav{
+		width: 100%;
+	}
+
+	.search-bar{
+		display: none;
+	}
+
+	#container{
+		width: 100%;
+		height: unset;
+		display: inline-block;
+		margin-top: 20px;
+		margin-bottom: 80px;
+	}
+
+	.box{
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 20px;
+		opacity: 0.8;
+	}
+
+	/* 手机端的动画不会有持续时间，而是随下拉的位置来控制，所有取消持续时间 */
+	.box img{
+		transition-duration: 0s;
+	}
+
+	.box .pre{
+		transition-duration: 0s;
+	}
+
+	/* 页脚部分元素的删除 */
+	.footer-container{
+		width: 100%;
+	}
+
+	.footer-info{
+		display: none;
+	}
+
+	.footer-logo{
+		display: none;
+	}
+
+}
