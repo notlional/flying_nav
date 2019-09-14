@@ -65,36 +65,44 @@ a {
 	height: 60px;
 }
 
-.nav>#nav-logo {
+.nav-logo {
 	height: 50px;
 	float: left;
 }
 
-.nav>span#nav-fly {
+#logo-mobile{
+	display: none;
+}
+/* 
+#nav-fly {
 	color: #fff;
 	line-height: 60px;
 	margin-left: 10px;
-}
+} */
 
 
-.nav>ul {
+#other-link {
 	float: right;
 	display: inline;
 }
 
-.nav>ul>li {
+.some-link {
 	width: 80px;
 	height: 60px;
 	display: inline-block;
 }
 
-.nav>ul>li>a {
+.some-link>a {
 	color: #fff;
 	font-size: 13px;
 	font-weight: 1000;
 	text-shadow: 0px 1px 6px rgb(49, 49, 49);
 	line-height: 60px;
 	/* 文本元素居中 行高等于父元素高度 */
+}
+
+#mobile-title{
+	display: none;
 }
 
 /* 导航栏end */
@@ -172,6 +180,10 @@ a {
 /* 按钮内置的图片，因为设置前面两个logo时产生了margin，这里消除margin */
 #search-icon{
 	margin-right: 0px;
+}
+
+#search-button:focus{
+	outline: 0px;
 }
 
 /* 搜索栏end */
@@ -273,8 +285,8 @@ a {
 }
 
 #qrFrame{
-	width: 100px;
 	height: 100px;
+	padding: 10px;
 	border: 1px solid #e5d6d8;
 	border-radius: 10px;
 	background-color: #8bb3d7;
@@ -288,9 +300,7 @@ a {
 	width: 80px;
 	height: 80px;
 	border: 0px;
-	position: relative;
-	top: 9px;
-	left: 9px;
+
 }
 /* 媒体查询   可以检测当前窗口的宽度 来适配不同的样式  
     响应式布局 */
@@ -303,6 +313,30 @@ a {
 		width: 100%;
 	}
 
+	#logo-pc{
+		display: none;
+	}
+
+	#logo-mobile{
+		display: unset;
+		height: 46px;
+		padding: 7px 0px 0px 15px;
+	}
+
+	#mobile-title{
+		display: inline;
+		float: right;
+		font-size: 24px;
+		color: #fff;
+		text-shadow: 0px 2px 4px #777;
+		padding: 13px 10px;
+		opacity: 0.8;;
+	}
+
+	.some-link{
+		display: none;
+	}
+
 	.search-bar{
 		display: none;
 	}
@@ -311,7 +345,7 @@ a {
 		width: 100%;
 		height: unset;
 		display: inline-block;
-		margin-top: 20px;
+		margin-top: 80px;
 		margin-bottom: 80px;
 	}
 
@@ -343,5 +377,4 @@ a {
 	.footer-logo{
 		display: none;
 	}
-
 }
